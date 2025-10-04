@@ -31,11 +31,23 @@ const user = [
     }
 ]
 // (user[1].email)
-console.log(tinderUser);
-console.log(Object.keys(tinderUser));
-console.log(Object.values(tinderUser));
-console.log(Object.entries(tinderUser));
-console.log(tinderUser.hasOwnProperty('isLoggedIn'));
+// console.log(tinderUser);
+// console.log(Object.keys(tinderUser));
+// console.log(Object.values(tinderUser));
+// console.log(Object.entries(tinderUser));
+// console.log(tinderUser.hasOwnProperty('isLoggedIn'));
 
-
-
+const course ={
+    courseName : "Js In Advance",
+    price : "999",
+    courseInstructor : "DNS"
+} 
+// console.log(course.courseName.price);
+const {courseInstructor : instructor} = course   // Object DE-STRUCTURE
+console.log(instructor);
+// {          JASON API REPRESENTATION
+//     "name":" DNS", 
+//     "id": 17,
+//     "courseName":"CODED",
+//     " price": "free"
+// }
