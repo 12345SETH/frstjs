@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> FINAL DOM </title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: whitesmoke;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <ul class="language">
+        <li>Javascript</li>
+        <li>C++</li>
+        <li>Django</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(lang){
+        const myLi = document.createElement('li')
+        myLi.innerHTML = lang
+        document.querySelector('.language').appendChild(myLi)
+    }
+    addLanguage('Python')
+    function addOptiLanguage(lang){
+        const myLi = document.createElement('li')
+        const addText = myLi.appendChild(document.createTextNode(lang))
+        document.querySelector('.language').appendChild(myLi)
+    }
+    addOptiLanguage('TypeScript')
+//  EDIT
+const secondLang = document.querySelector("li:nth-child(2)")
+// secondLang.innerHTML = "C#"
+// const newLi = document.createElement('li')
+// newli.textContent = "C#"
+// secondLang.replaceWith(newLi)
+// Other EDIT METHOD 
+const firstLang = document.querySelector("li:first-child")
+firstLang.outerHTML = "<li>TypeScript</li>"
+//  REMOVE
+const lastLang = document.querySelector("li:last-child")
+lastLang.remove()
+</script>
+</html>
