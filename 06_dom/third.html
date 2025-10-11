@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEW DOM</title>
+</head>
+<style>
+        .bg-black{
+            background-color: #212121;
+            color:whitesmoke 
+        }
+    </style>
+    <body class="bg-black">
+    <div class="parent">
+    </div>
+</body>
+<script>
+const div = document.createElement('div')
+console.log(div);
+div.className = "main"
+div.id = Math.round(Math.random()*10+1)
+div.setAttribute("title",'this is a  div')
+div.style.backgroundColor = "teal"
+div.style.padding = "20px"
+// div.innerText = "Chai With DNS"
+const addText = document.createTextNode("Chai With DNS")
+div.appendChild(addText)
+document.body.appendChild(div)
+
+</script> 
+</html>
